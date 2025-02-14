@@ -7,6 +7,7 @@ import { TimeBox } from "../components/TimeBox";
 import { Carousel } from "../components/Carousel";
 import { Footer } from "../components/Footer";
 import { Link, useNavigate } from "react-router-dom";
+import brochure from "../assets/SponsorBrochure.pdf";
 
 export const Home = () => {
   const navigate = useNavigate();
@@ -36,6 +37,10 @@ export const Home = () => {
 
     return () => clearInterval(timer);
   }, [eventDate]);
+
+  const handleOpenPDF = () => {
+    window.open(brochure, "_blank");
+  };
 
   return (
     <div className="w-full mx-0 mt-0 py-0 bg-gray-200 dark:bg-gray-600">
@@ -149,7 +154,10 @@ export const Home = () => {
             <button className="md:p-4 p-2 text-xs md:text-lg h-fit bg-teal-600 dark:bg-[#EA3C3F] dark:hover:bg-[#c87e80] rounded-xl text-white md:font-bold hover:scale-105 transition duration-300 ease-in-out hover:bg-teal-700 hover:shadow-lg cursor-pointer">
               Register Now
             </button>
-            <button className="md:p-4 p-2 text-xs md:text-lg h-fit bg-teal-600 dark:bg-[#EA3C3F] dark:hover:bg-[#c87e80] rounded-xl text-white md:font-bold hover:scale-105 transition duration-300 ease-in-out hover:bg-teal-700 hover:shadow-lg cursor-pointer">
+            <button
+              onClick={handleOpenPDF}
+              className="md:p-4 p-2 text-xs md:text-lg h-fit bg-teal-600 dark:bg-[#EA3C3F] dark:hover:bg-[#c87e80] rounded-xl text-white md:font-bold hover:scale-105 transition duration-300 ease-in-out hover:bg-teal-700 hover:shadow-lg cursor-pointer"
+            >
               Sponsorship Brochure
             </button>
             <button

@@ -24,8 +24,51 @@ import KasturiBarman from "../assets/KasturiBarman.jpg";
 import SnehaDas from "../assets/SnehaDas.jpg";
 import AnkurMukherjee from "../assets/AnkurMukherjee.jpg";
 import RounakDas from "../assets/RounakDas.jpg";
+import MeghaDutta from "../assets/MeghaDutta.jpg";
 
 const teamData = {
+  mentors: [
+    {
+      name: "Shouvik Datta",
+      role: "Advisor",
+      img: DebanikDutta,
+    },
+    {
+      name: "Subhrajyoti Sarkar",
+      role: "Mentor",
+      img: DebanikDutta,
+    },
+    {
+      name: "Sayantan Nath",
+      role: "Mentor",
+      img: DebanikDutta,
+    },
+    {
+      name: "Sayan Khan",
+      role: "Mentor",
+      img: DebanikDutta,
+    },
+    {
+      name: "Sambit Saha",
+      role: "Mentor",
+      img: DebanikDutta,
+    },
+    {
+      name: "Sreeja Saraswati",
+      role: "Mentor",
+      img: DebanikDutta,
+    },
+    {
+      name: "Satyaki Acharya",
+      role: "Mentor",
+      img: DebanikDutta,
+    },
+    {
+      name: "Sreeja Saraswati",
+      role: "Mentor",
+      img: DebanikDutta,
+    },
+  ],
   core: [
     {
       name: "Debanik Dutta",
@@ -33,14 +76,14 @@ const teamData = {
       img: DebanikDutta,
     },
     {
-      name: "Rajarshi Das",
-      role: "Co-ordinator",
-      img: RajarshiDas,
-    },
-    {
       name: "Retisha Bhaumik",
       role: "Treasurer",
       img: RetishaBhaumik,
+    },
+    {
+      name: "Rajarshi Das",
+      role: "Co-ordinator",
+      img: RajarshiDas,
     },
     {
       name: "Nawal Fida Laskar",
@@ -159,6 +202,28 @@ const teamData = {
       img: SnehaDas,
     },
   ],
+  art: [
+    {
+      name: "Megha Dutta",
+      role: "Art Head",
+      img: MeghaDutta,
+    },
+    {
+      name: "Sudipta Mandal",
+      role: "Art Team",
+      img: SudiptaMandal,
+    },
+    {
+      name: "Chandril Ghosh",
+      role: "Art Team",
+      img: ChandrilGhosh,
+    },
+    {/*{
+      name: "Piyush Patra",
+      role: "Art Team",
+      img: RounakDas,
+    },*/}
+  ]
 };
 
 const tabs = [
@@ -166,6 +231,7 @@ const tabs = [
   { key: "graphics", label: "Graphics Team" },
   { key: "sponsors", label: "Sponsor Team" },
   { key: "pr", label: "PR Team" },
+  { key: "art", label: "Art Team" },
 ];
 
 export const Team = () => {
@@ -179,12 +245,12 @@ export const Team = () => {
         <h1>MEET OUR TEAM</h1>
       </div>
 
-      <div className="flex md:justify-center justify-center px-4 md:px-0 md:space-x-4 space-x-2 bg-[#8FDACF] dark:bg-[#364153] py-4 md:w-[85%] w-[90%] mx-auto rounded-2xl">
+      <div className="flex md:justify-center justify-center px-1 md:px-0 md:space-x-4 space-x-2 bg-[#8FDACF] dark:bg-[#364153] py-4 md:w-[85%] w-full mx-auto md:rounded-2xl">
         {tabs.map((tab) => (
           <button
             key={tab.key}
             onClick={() => setActiveTab(tab.key)}
-            className={`px-4 py-2 font-semibold rounded-lg transition-colors duration-300 cursor-pointer text-xs md:text-lg ${
+            className={`md:px-4 md:py-2 px-1 py-0.5 font-semibold rounded-lg transition-colors duration-300 cursor-pointer text-[10px] md:text-lg ${
               activeTab === tab.key
                 ? "bg-teal-500 text-white dark:bg-[#181d26]"
                 : "bg-[#8FDACF] dark:bg-gray-700 text-teal-800 dark:text-gray-200"

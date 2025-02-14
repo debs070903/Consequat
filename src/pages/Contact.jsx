@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Mail} from "lucide-react";
+import { Mail } from "lucide-react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { Navbar } from "../components/Navbar";
@@ -159,7 +159,7 @@ export const Contact = () => {
           <p className="flex justify-center items-center space-x-2 mt-4">
             <Mail size={20} className="text-teal-500 dark:text-white" />
             <a
-              href="kolkatabylensified@gmail.com"
+              href="mailto:kolkatabylensified@gmail.com"
               className="text-teal-500 hover:text-teal-700 dark:text-white dark:hover:text-gray-400"
             >
               kolkatabylensified@gmail.com
