@@ -25,48 +25,32 @@ import SnehaDas from "../assets/SnehaDas.jpg";
 import AnkurMukherjee from "../assets/AnkurMukherjee.jpg";
 import RounakDas from "../assets/RounakDas.jpg";
 import MeghaDutta from "../assets/MeghaDutta.jpg";
+import RajdeepPaul from "../assets/RajdeepPaul.jpg";
+import ShouvikDatta from "../assets/ShouvikDatta.jpg";
+import SayantanNath from "../assets/SayantanNath.jpg";
+import ArghyaMondal from "../assets/ArghyaMondal.jpg";
 
 const teamData = {
-  mentors: [
+  advisory: [
     {
       name: "Shouvik Datta",
       role: "Advisor",
-      img: DebanikDutta,
-    },
-    {
-      name: "Subhrajyoti Sarkar",
-      role: "Mentor",
-      img: DebanikDutta,
+      img: ShouvikDatta,
     },
     {
       name: "Sayantan Nath",
-      role: "Mentor",
-      img: DebanikDutta,
+      role: "Advisor",
+      img: SayantanNath,
     },
     {
-      name: "Sayan Khan",
-      role: "Mentor",
-      img: DebanikDutta,
+      name: "Rajdeep Paul",
+      role: "Advisor",
+      img: RajdeepPaul,
     },
     {
-      name: "Sambit Saha",
-      role: "Mentor",
-      img: DebanikDutta,
-    },
-    {
-      name: "Sreeja Saraswati",
-      role: "Mentor",
-      img: DebanikDutta,
-    },
-    {
-      name: "Satyaki Acharya",
-      role: "Mentor",
-      img: DebanikDutta,
-    },
-    {
-      name: "Sreeja Saraswati",
-      role: "Mentor",
-      img: DebanikDutta,
+      name: "Arghya Mondal",
+      role: "Advisor",
+      img: ArghyaMondal,
     },
   ],
   core: [
@@ -218,20 +202,23 @@ const teamData = {
       role: "Art Team",
       img: ChandrilGhosh,
     },
-    {/*{
+    {
+      /*{
       name: "Piyush Patra",
       role: "Art Team",
       img: RounakDas,
-    },*/}
-  ]
+    },*/
+    },
+  ],
 };
 
 const tabs = [
-  { key: "core", label: "Core Team" },
-  { key: "graphics", label: "Graphics Team" },
-  { key: "sponsors", label: "Sponsor Team" },
-  { key: "pr", label: "PR Team" },
-  { key: "art", label: "Art Team" },
+  { key: "advisory", label: "Advisory" },
+  { key: "core", label: "Core" },
+  { key: "graphics", label: "Graphics" },
+  { key: "sponsors", label: "Sponsor" },
+  { key: "pr", label: "PR" },
+  { key: "art", label: "Art" },
 ];
 
 export const Team = () => {
