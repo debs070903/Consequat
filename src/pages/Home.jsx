@@ -11,7 +11,7 @@ import brochure from "../assets/SponsorBrochure.pdf";
 
 export const Home = () => {
   const navigate = useNavigate();
-  const eventDate = new Date("2025-05-03T14:59:59").getTime();
+  const eventDate = new Date("2025-06-28T14:59:59").getTime();
   const [timeLeft, setTimeLeft] = useState({});
 
   useEffect(() => {
@@ -44,7 +44,6 @@ export const Home = () => {
 
   return (
     <div className="w-full mx-0 mt-0 py-0 bg-gray-200 dark:bg-gray-600">
-      <Navbar />
       <div className="bg-gray-200 dark:bg-gray-600">
         <div className="w-full bg-gray-200 dark:bg-gray-600 py-6 md:py-16 flex justify-center">
           <img
@@ -111,7 +110,7 @@ export const Home = () => {
           </p>
           <p className="md:text-xl text-md">
             This year, Consequat will be held on{" "}
-            <strong>May 3rd and 4th, 2025</strong>, at{" "}
+            <strong>June 28th and 29th, 2025</strong>, at{" "}
             <strong>Nandalal Bose & Jamini Roy Gallery, ICCR</strong>, promising
             an even grander celebration of creativity.
           </p>
@@ -145,14 +144,14 @@ export const Home = () => {
             📍 <strong>Location:</strong> ICCR, Kolkata, India
           </p>
           <p className="md:text-xl dark:text-white">
-            🗓 <strong>Date:</strong> 3rd & 4th May
+            🗓 <strong>Date:</strong> 28th and 29th June 2025
           </p>
           <p className="md:text-xl dark:text-white">
             ⏰ <strong>Time:</strong> 3pm Onwards
           </p>
           <div className="flex gap-1 md:gap-4">
             <button className="md:p-4 p-2 text-xs md:text-lg h-fit bg-teal-600 dark:bg-[#EA3C3F] dark:hover:bg-[#c87e80] rounded-xl text-white md:font-bold hover:scale-105 transition duration-300 ease-in-out hover:bg-teal-700 hover:shadow-lg cursor-pointer">
-              Register Now
+              <a href="https://forms.gle/f5BrRY6z36tjCTH28" target="_blank" rel="noopener noreferrer" className="">Register Now</a>
             </button>
             <button
               onClick={handleOpenPDF}
@@ -169,9 +168,7 @@ export const Home = () => {
           </div>
         </div>
       </div>
-      <div className="md:mt-20 mt-10">
-        <Footer />
-      </div>
+      <div className="md:mt-20 mt-10"></div>
     </div>
   );
 };

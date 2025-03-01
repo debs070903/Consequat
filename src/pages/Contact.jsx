@@ -43,7 +43,6 @@ export const Contact = () => {
 
   return (
     <div className="min-h-screen flex flex-col bg-gray-50 dark:bg-gray-900 text-gray-800 dark:text-gray-100">
-      <Navbar />
       <div className="flex-grow py-8 px-4 md:px-16">
         <h1 className="text-3xl font-bold text-center mb-6">Contact Us</h1>
         <form
@@ -167,7 +166,6 @@ export const Contact = () => {
           </p>
         </div>
       </div>
-      <Footer />
       <ToastContainer />
     </div>
   );

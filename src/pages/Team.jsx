@@ -2,218 +2,198 @@ import React, { useState } from "react";
 import { Navbar } from "../components/Navbar";
 import { TeamCard } from "../components/TeamCard";
 import { Footer } from "../components/Footer";
-import RetishaBhaumik from "../assets/RetishaBhaumik.jpg";
-import ChandrilGhosh from "../assets/ChandrilGhosh.jpg";
-import ShaazayaChoudhury from "../assets/ShaazayaChoudhury.jpg";
-import SubhabilashDas from "../assets/SubhabilashDas.jpg";
-import WrickBanerjee from "../assets/WrickBanerjee.jpg";
-import NawalFidaLaskar from "../assets/NawalFidaLaskar.jpg";
-import RaghavJaiswal from "../assets/RaghavJaiswal.jpg";
-import DebanikDutta from "../assets/DebanikDutta.png";
-import RajarshiDas from "../assets/RajarshiDas.png";
-import DeepakKumar from "../assets/DeepakKumar.jpg";
-import MainakhChakraborty from "../assets/MainakhChakroborty.jpg";
-import ArifHossain from "../assets/ArifHossain.jpg";
-import SougataSantra from "../assets/SougataSantra.jpg";
-import SudiptaMandal from "../assets/SudiptaMandal.jpg";
-import SrizanSutradhar from "../assets/SrizanSutradhar.jpg";
-import RomitSom from "../assets/RomitSom.jpg";
-import AryaPoddar from "../assets/AryaPodder.jpg";
-import HimaghnaGhosh from "../assets/HimaghnaGhosh.jpg";
-import KasturiBarman from "../assets/KasturiBarman.jpg";
-import SnehaDas from "../assets/SnehaDas.jpg";
-import AnkurMukherjee from "../assets/AnkurMukherjee.jpg";
-import RounakDas from "../assets/RounakDas.jpg";
-import MeghaDutta from "../assets/MeghaDutta.jpg";
-import RajdeepPaul from "../assets/RajdeepPaul.jpg";
-import ShouvikDatta from "../assets/ShouvikDatta.jpg";
-import SayantanNath from "../assets/SayantanNath.jpg";
-import ArghyaMondal from "../assets/ArghyaMondal.jpg";
 
 const teamData = {
   advisory: [
+    { name: "Shouvik Datta", role: "Advisor", img: "/assets/ShouvikDatta.jpg" },
+    { name: "Sayantan Nath", role: "Advisor", img: "/assets/SayantanNath.jpg" },
+    { name: "Rajdeep Paul", role: "Advisor", img: "/assets/RajdeepPaul.jpg" },
+    { name: "Arghya Mondal", role: "Advisor", img: "/assets/ArghyaMondal.jpg" },
+  ],
+  mentors: [
     {
-      name: "Shouvik Datta",
-      role: "Advisor",
-      img: ShouvikDatta,
+      name: "Subhrajyoti Sarkar",
+      role: "Mentor",
+      img: "/assets/SubhrajyotiSarkar.jpg",
     },
     {
-      name: "Sayantan Nath",
-      role: "Advisor",
-      img: SayantanNath,
+      name: "Shibasish Saha",
+      role: "Mentor",
+      img: "/assets/ShibasishSaha.jpg",
     },
     {
-      name: "Rajdeep Paul",
-      role: "Advisor",
-      img: RajdeepPaul,
+      name: "Satyaki Acharya",
+      role: "Mentor",
+      img: "/assets/SatyakiAcharya.jpg",
     },
     {
-      name: "Arghya Mondal",
-      role: "Advisor",
-      img: ArghyaMondal,
+      name: "Supriyo Mondal",
+      role: "Mentor",
+      img: "/assets/SupriyoMondal.jpg",
     },
+    { name: "Somartya Bera", role: "Mentor", img: "/assets/SomartyaBera.jpg" },
+    { name: "Shayan Bose", role: "Mentor", img: "/assets/ShayanBose.jpg" },
+    {
+      name: "Shilpa Bhattacharya",
+      role: "Mentor",
+      img: "/assets/ShilpaBhattacharya.jpg",
+    },
+    { name: "Sayan Khan", role: "Mentor", img: "/assets/SayanKhan.jpg" },
+    { name: "Sambit Saha", role: "Mentor", img: "/assets/SambitSaha.jpg" },
+    {
+      name: "Sreeja Saraswati",
+      role: "Mentor",
+      img: "/assets/SreejaSaraswati.jpg",
+    },
+    {
+      name: "Gairik Chakraborty",
+      role: "Mentor",
+      img: "/assets/GairikChakraborty.jpg",
+    },
+    { name: "Simran Nasrin", role: "Mentor", img: "/assets/SimranNasrin.jpg" },
+    { name: "Soham Mitra", role: "Mentor", img: "/assets/SohamMitra.jpg" },
+    { name: "Isha Goswami", role: "Mentor", img: "/assets/IshaGoswami.jpg" },
+    { name: "Rupam Ghosh", role: "Mentor", img: "/assets/RupamGhosh.jpg" },
   ],
   core: [
     {
       name: "Debanik Dutta",
       role: "Team Head",
-      img: DebanikDutta,
+      img: "/assets/DebanikDutta.jpg",
     },
     {
       name: "Retisha Bhaumik",
       role: "Treasurer",
-      img: RetishaBhaumik,
+      img: "/assets/RetishaBhaumik.jpg",
     },
     {
       name: "Rajarshi Das",
       role: "Co-ordinator",
-      img: RajarshiDas,
+      img: "/assets/RajarshiDas.jpg",
     },
     {
       name: "Nawal Fida Laskar",
       role: "Sponsor Head",
-      img: NawalFidaLaskar,
+      img: "/assets/NawalFidaLaskar.jpg",
     },
     {
       name: "Chandril Ghosh",
       role: "Social Media Head",
-      img: ChandrilGhosh,
+      img: "/assets/ChandrilGhosh.jpg",
     },
     {
       name: "Shaazaya Choudhury",
       role: "PR Head",
-      img: ShaazayaChoudhury,
+      img: "/assets/ShaazayaChoudhury.jpg",
     },
     {
       name: "Subhabilash Das",
       role: "Graphics Head",
-      img: SubhabilashDas,
+      img: "/assets/SubhabilashDas.jpg",
     },
     {
       name: "Wrick Banerjee",
       role: "Event Manager",
-      img: WrickBanerjee,
+      img: "/assets/WrickBanerjee.jpg",
     },
     {
       name: "Raghav Jaiswal",
       role: "Event Manager",
-      img: RaghavJaiswal,
+      img: "/assets/RaghavJaiswal.jpg",
     },
   ],
   graphics: [
     {
       name: "Subhabilash Das",
       role: "Graphics Head",
-      img: SubhabilashDas,
+      img: "/assets/SubhabilashDas.jpg",
     },
     {
       name: "Sudipta Mandal",
       role: "Graphic Designer",
-      img: SudiptaMandal,
+      img: "/assets/SudiptaMandal.jpg",
     },
     {
       name: "Mainakh Chakroborty",
       role: "Graphic Designer",
-      img: MainakhChakraborty,
+      img: "/assets/MainakhChakroborty.jpg",
     },
     {
       name: "Arif Hossain",
       role: "Graphic Designer",
-      img: ArifHossain,
+      img: "/assets/ArifHossain.jpg",
     },
     {
       name: "Deepak Kumar",
       role: "Graphic Designer",
-      img: DeepakKumar,
+      img: "/assets/DeepakKumar.jpg",
     },
     {
       name: "Sougata Santra",
       role: "Graphic Designer",
-      img: SougataSantra,
+      img: "/assets/SougataSantra.jpg",
     },
   ],
   sponsors: [
     {
       name: "Nawal Fida Laskar",
       role: "Sponsor Head",
-      img: NawalFidaLaskar,
+      img: "/assets/NawalFidaLaskar.jpg",
     },
     {
       name: "Himaghna Ghosh",
       role: "Sponsor Team",
-      img: HimaghnaGhosh,
+      img: "/assets/HimaghnaGhosh.jpg",
     },
     {
       name: "Arya Podder",
       role: "Sponsor Team",
-      img: AryaPoddar,
+      img: "/assets/AryaPodder.jpg",
     },
-    {
-      name: "Romit Som",
-      role: "Sponsor Team",
-      img: RomitSom,
-    },
+    { name: "Romit Som", role: "Sponsor Team", img: "/assets/RomitSom.jpg" },
     {
       name: "Srizan Sutradhar",
       role: "Sponsor Team",
-      img: SrizanSutradhar,
+      img: "/assets/SrizanSutradhar.jpg",
     },
   ],
   pr: [
     {
       name: "Shaazaya Choudhury",
       role: "PR Head",
-      img: ShaazayaChoudhury,
+      img: "/assets/ShaazayaChoudhury.jpg",
     },
     {
       name: "Kasturi Barman",
       role: "PR Team",
-      img: KasturiBarman,
+      img: "/assets/KasturiBarman.jpg",
     },
-    {
-      name: "Rounak Das",
-      role: "PR Team",
-      img: RounakDas,
-    },
+    { name: "Rounak Das", role: "PR Team", img: "/assets/RounakDas.jpg" },
     {
       name: "Ankur Mukherjee",
       role: "PR Team",
-      img: AnkurMukherjee,
+      img: "/assets/AnkurMukherjee.jpg",
     },
-    {
-      name: "Sneha Das",
-      role: "PR Team",
-      img: SnehaDas,
-    },
+    { name: "Sneha Das", role: "PR Team", img: "/assets/SnehaDas.jpg" },
   ],
   art: [
-    {
-      name: "Megha Dutta",
-      role: "Art Head",
-      img: MeghaDutta,
-    },
+    { name: "Megha Dutta", role: "Art Head", img: "/assets/MeghaDutta.jpg" },
     {
       name: "Sudipta Mandal",
       role: "Art Team",
-      img: SudiptaMandal,
+      img: "/assets/SudiptaMandal.jpg",
     },
     {
       name: "Chandril Ghosh",
       role: "Art Team",
-      img: ChandrilGhosh,
-    },
-    {
-      /*{
-      name: "Piyush Patra",
-      role: "Art Team",
-      img: RounakDas,
-    },*/
+      img: "/assets/ChandrilGhosh.jpg",
     },
   ],
 };
 
 const tabs = [
   { key: "advisory", label: "Advisory" },
+  { key: "mentors", label: "Mentors" },
   { key: "core", label: "Core" },
   { key: "graphics", label: "Graphics" },
   { key: "sponsors", label: "Sponsor" },
@@ -226,18 +206,15 @@ export const Team = () => {
 
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-[#4A5565] text-gray-800 dark:text-gray-100">
-      <Navbar />
-
       <div className="md:text-4xl text-2xl md:my-10 my-5 font-bold text-teal-600 dark:text-white">
         <h1>MEET OUR TEAM</h1>
       </div>
-
-      <div className="flex md:justify-center justify-center px-1 md:px-0 md:space-x-4 space-x-2 bg-[#8FDACF] dark:bg-[#364153] py-4 md:w-[85%] w-full mx-auto md:rounded-2xl">
+      <div className="flex justify-center px-1 md:px-0 space-x-2 bg-[#8FDACF] dark:bg-[#364153] py-4 md:w-[85%] w-[90%] mx-auto rounded-2xl">
         {tabs.map((tab) => (
           <button
             key={tab.key}
             onClick={() => setActiveTab(tab.key)}
-            className={`md:px-4 md:py-2 px-1 py-0.5 font-semibold rounded-lg transition-colors duration-300 cursor-pointer text-[10px] md:text-lg ${
+            className={`md:px-4 md:py-2 px-0.5 font-semibold rounded-lg transition-colors duration-300 cursor-pointer text-xs md:text-lg ${
               activeTab === tab.key
                 ? "bg-teal-500 text-white dark:bg-[#181d26]"
                 : "bg-[#8FDACF] dark:bg-gray-700 text-teal-800 dark:text-gray-200"
@@ -247,19 +224,16 @@ export const Team = () => {
           </button>
         ))}
       </div>
-
-      <main className="py-8 px-4 md:px-16 md:mb-10 mb-5">
+      <main className="py-8 px-4 md:px-16 mb-10">
         <h2 className="text-2xl font-bold text-center mb-6">
           {tabs.find((tab) => tab.key === activeTab)?.label}
         </h2>
-        <div className="grid grid-cols-2 sm:grid-cols-3 gap-6 md:mt-8 mt-4">
+        <div className="grid grid-cols-2 sm:grid-cols-3 gap-6 mt-4">
           {teamData[activeTab].map((member, index) => (
             <TeamCard key={index} {...member} />
           ))}
         </div>
       </main>
-
-      <Footer />
     </div>
   );
 };

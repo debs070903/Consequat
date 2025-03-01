@@ -7,20 +7,21 @@ import { Home } from "./pages/Home";
 import { About } from "./pages/About";
 import { Team } from "./pages/Team";
 import { Contact } from "./pages/Contact";
+import { Layout } from "./components/Layout";
 
 function App() {
   const [count, setCount] = useState(0);
 
   return (
     <Router>
-      <div className="w-full m-0">
+      <Layout>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/team" element={<Team />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
-      </div>
+      </Layout>
     </Router>
   );
 }

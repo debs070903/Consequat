@@ -6,10 +6,9 @@ import { Footer } from "../components/Footer";
 import { useNavigate } from "react-router-dom";
 
 export const About = () => {
-    const navigate = useNavigate();
+  const navigate = useNavigate();
   return (
-    <div className="bg-[#E5E7EB] dark:bg-[#4A5565]" >
-      <Navbar />
+    <div className="bg-[#E5E7EB] dark:bg-[#4A5565]">
       <div className="bg-[#E5E7EB] dark:bg-[#4A5565] py-10 md:py-5 flex justify-center">
         <div className="md:w-full w-[85%]">
           <div className="max-w-4xl mx-auto text-center">
@@ -128,15 +127,16 @@ export const About = () => {
             <button className="md:p-4 p-2 text-xs md:text-lg h-fit bg-teal-600 dark:bg-[#EA3C3F] dark:hover:bg-[#c87e80] rounded-xl text-white md:font-bold hover:scale-105 transition duration-300 ease-in-out hover:bg-teal-700 hover:shadow-lg cursor-pointer">
               Sponsorship Brochure
             </button>
-            <button onClick={() => navigate('/contact')} className="md:p-4 p-2 text-xs md:text-lg h-fit bg-teal-600 dark:bg-[#EA3C3F] dark:hover:bg-[#c87e80] rounded-xl text-white md:font-bold hover:scale-105 transition duration-300 ease-in-out hover:bg-teal-700 hover:shadow-lg cursor-pointer">
+            <button
+              onClick={() => navigate("/contact")}
+              className="md:p-4 p-2 text-xs md:text-lg h-fit bg-teal-600 dark:bg-[#EA3C3F] dark:hover:bg-[#c87e80] rounded-xl text-white md:font-bold hover:scale-105 transition duration-300 ease-in-out hover:bg-teal-700 hover:shadow-lg cursor-pointer"
+            >
               Contact Us
             </button>
           </div>
         </div>
       </div>
-      <div className="md:mt-10">
-        <Footer />
-      </div>
+      <div className="md:mt-10"></div>
     </div>
   );
 };
