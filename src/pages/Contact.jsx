@@ -4,6 +4,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { Navbar } from "../components/Navbar";
 import { Footer } from "../components/Footer";
+import { motion } from "framer-motion";
 
 export const Contact = () => {
   const [formData, setFormData] = useState({
@@ -43,8 +44,14 @@ export const Contact = () => {
 
   return (
     <div className="min-h-screen flex flex-col bg-gray-50 dark:bg-gray-900 text-gray-800 dark:text-gray-100">
-      <div className="flex-grow py-8 px-4 md:px-16">
-        <h1 className="text-3xl font-bold text-center mb-6">Contact Us</h1>
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        viewport={{ amount: 0.2 }}
+        className="flex-grow py-8 px-4 md:px-16"
+      >
+        <h1 className="text-3xl font-bold text-center mb-6">CONTACT US</h1>
         <form
           onSubmit={handleSubmit}
           className="max-w-lg mx-auto bg-white dark:bg-gray-800 shadow-md rounded-lg p-6 space-y-4"
@@ -165,7 +172,7 @@ export const Contact = () => {
             </a>
           </p>
         </div>
-      </div>
+      </motion.div>
       <ToastContainer />
     </div>
   );

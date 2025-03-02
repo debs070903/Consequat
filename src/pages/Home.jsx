@@ -8,10 +8,11 @@ import { Carousel } from "../components/Carousel";
 import { Footer } from "../components/Footer";
 import { Link, useNavigate } from "react-router-dom";
 import brochure from "../assets/SponsorBrochure.pdf";
+import { motion } from "framer-motion";
 
 export const Home = () => {
   const navigate = useNavigate();
-  const eventDate = new Date("2025-06-28T14:59:59").getTime();
+  const eventDate = new Date("2025-06-18T14:59:59").getTime();
   const [timeLeft, setTimeLeft] = useState({});
 
   useEffect(() => {
@@ -43,9 +44,15 @@ export const Home = () => {
   };
 
   return (
-    <div className="w-full mx-0 mt-0 py-0 bg-gray-200 dark:bg-gray-600">
-      <div className="bg-gray-200 dark:bg-gray-600">
-        <div className="w-full bg-gray-200 dark:bg-gray-600 py-6 md:py-16 flex justify-center">
+    <div className="w-full mx-0 mt-0 py-0 bg-gray-50 dark:bg-gray-600">
+      <div className="bg-gray-50 dark:bg-gray-600">
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ amount: 0.2 }}
+          className="w-full bg-gray-50 dark:bg-gray-600 py-6 md:py-16 flex justify-center"
+        >
           <img
             src={Cover}
             className="w-[95%] md:w-[85%] h-auto object-cover rounded-xl dark:block hidden"
@@ -56,11 +63,17 @@ export const Home = () => {
             className="w-[95%] md:w-[85%] h-auto object-cover rounded-xl dark:hidden"
             alt="Event Cover"
           />
-        </div>
+        </motion.div>
 
-        <div className="flex flex-col items-center justify-center px-4 text-center bg-gray-200 dark:bg-gray-600">
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ amount: 0.2 }}
+          className="flex flex-col items-center justify-center px-4 text-center bg-gray-50 dark:bg-gray-600"
+        >
           <h1 className="text-2xl md:text-3xl font-bold mb-3 md:mb-10 text-gray-800 dark:text-white">
-            Event Going Live In...
+            Registration Ends In...
           </h1>
           {timeLeft.expired ? (
             <p className="text-lg md:text-xl text-red-500">
@@ -74,19 +87,31 @@ export const Home = () => {
               <TimeBox label="Seconds" value={timeLeft.seconds} />
             </div>
           )}
-        </div>
+        </motion.div>
       </div>
 
       <div className="md:mt-20 mt-10 dark:text-white flex flex-col md:flex-row items-center justify-evenly px-4">
-        <div className="w-full md:w-[40%] flex justify-center md:justify-start">
+        <motion.div
+          initial={{ opacity: 0, x: -50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ amount: 0.2 }}
+          className="w-full md:w-[40%] flex justify-center md:justify-start"
+        >
           <img
             src={consequat3}
             className="w-[70%] md:w-full rounded-lg shadow-lg"
             alt="Consequat Exhibition"
           />
-        </div>
+        </motion.div>
 
-        <div className="mt-6 md:mt-0 w-full md:w-[50%] flex flex-col gap-2 text-center md:text-left">
+        <motion.div
+          initial={{ opacity: 0, x: 50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ amount: 0.2 }}
+          className="mt-6 md:mt-0 w-full md:w-[50%] flex flex-col gap-2 text-center md:text-left"
+        >
           <h1 className="font-bold text-2xl md:text-4xl text-teal-600 dark:text-gray-200">
             ABOUT
           </h1>
@@ -119,14 +144,20 @@ export const Home = () => {
               Read More...
             </p>
           </Link>
-        </div>
+        </motion.div>
       </div>
 
       <div className="md:mt-20 mt-10">
         <Carousel />
       </div>
 
-      <div className="flex flex-col md:flex-row items-center justify-center md:gap-10 gap-6 md:mt-20 mt-10">
+      <motion.div
+        initial={{ opacity: 0, x: -50 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.8 }}
+        viewport={{ amount: 0.2 }}
+        className="flex flex-col md:flex-row items-center justify-center md:gap-10 gap-6 md:mt-20 mt-10"
+      >
         <div>
           <iframe
             className="md:w-96 md:h-80 w-48 h-40 rounded-lg border-2 border-gray-300"
@@ -136,7 +167,13 @@ export const Home = () => {
           ></iframe>
         </div>
 
-        <div className="md:text-left text-center flex flex-col md:gap-6 gap-2">
+        <motion.div
+          initial={{ opacity: 0, x: 50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ amount: 0.2 }}
+          className="md:text-left text-center flex flex-col md:gap-6 gap-2"
+        >
           <h1 className="font-bold text-2xl md:text-4xl text-teal-600 dark:text-gray-200">
             EVENT DETAILS
           </h1>
@@ -150,9 +187,14 @@ export const Home = () => {
             ⏰ <strong>Time:</strong> 3pm Onwards
           </p>
           <div className="flex gap-1 md:gap-4">
-            <button className="md:p-4 p-2 text-xs md:text-lg h-fit bg-teal-600 dark:bg-[#EA3C3F] dark:hover:bg-[#c87e80] rounded-xl text-white md:font-bold hover:scale-105 transition duration-300 ease-in-out hover:bg-teal-700 hover:shadow-lg cursor-pointer">
-              <a href="https://forms.gle/f5BrRY6z36tjCTH28" target="_blank" rel="noopener noreferrer" className="">Register Now</a>
-            </button>
+            <a
+              href="https://forms.gle/f5BrRY6z36tjCTH28"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="md:p-4 p-2 text-xs md:text-lg h-fit bg-teal-600 dark:bg-[#EA3C3F] dark:hover:bg-[#c87e80] rounded-xl text-white md:font-bold hover:scale-105 transition duration-300 ease-in-out hover:bg-teal-700 hover:shadow-lg cursor-pointer text-center inline-block"
+            >
+              Register Now
+            </a>
             <button
               onClick={handleOpenPDF}
               className="md:p-4 p-2 text-xs md:text-lg h-fit bg-teal-600 dark:bg-[#EA3C3F] dark:hover:bg-[#c87e80] rounded-xl text-white md:font-bold hover:scale-105 transition duration-300 ease-in-out hover:bg-teal-700 hover:shadow-lg cursor-pointer"
@@ -166,8 +208,8 @@ export const Home = () => {
               Contact Us
             </button>
           </div>
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
       <div className="md:mt-20 mt-10"></div>
     </div>
   );

@@ -1,8 +1,4 @@
-import { useState } from "react";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
-import "./App.css";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Home } from "./pages/Home";
 import { About } from "./pages/About";
 import { Team } from "./pages/Team";
@@ -10,18 +6,17 @@ import { Contact } from "./pages/Contact";
 import { Layout } from "./components/Layout";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
     <Router>
-      <Layout>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/team" element={<Team />} />
-          <Route path="/contact" element={<Contact />} />
-        </Routes>
-      </Layout>
+      <Routes>
+        {/* Layout wraps all routes */}
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="about" element={<About />} />
+          <Route path="team" element={<Team />} />
+          <Route path="contact" element={<Contact />} />
+        </Route>
+      </Routes>
     </Router>
   );
 }

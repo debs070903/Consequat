@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Navbar } from "../components/Navbar";
 import { TeamCard } from "../components/TeamCard";
 import { Footer } from "../components/Footer";
+import { motion } from "framer-motion";
 
 const teamData = {
   advisory: [
@@ -188,6 +189,11 @@ const teamData = {
       role: "Art Team",
       img: "/assets/ChandrilGhosh.jpg",
     },
+    {
+      name: "Piyush Patra Chatterjee",
+      role: "Art Team",
+      img: "/assets/PiyushPatra.jpg",
+    },
   ],
 };
 
@@ -206,10 +212,22 @@ export const Team = () => {
 
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-[#4A5565] text-gray-800 dark:text-gray-100">
-      <div className="md:text-4xl text-2xl md:my-10 my-5 font-bold text-teal-600 dark:text-white">
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 0.8 }}
+        viewport={{ amount: 0.2 }}
+        className="md:text-4xl text-2xl md:my-10 my-5 font-bold text-teal-600 dark:text-white text-center"
+      >
         <h1>MEET OUR TEAM</h1>
-      </div>
-      <div className="flex justify-center px-1 md:px-0 space-x-2 bg-[#8FDACF] dark:bg-[#364153] py-4 md:w-[85%] w-[90%] mx-auto rounded-2xl">
+      </motion.div>
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 0.8 }}
+        viewport={{ amount: 0.2 }}
+        className="flex justify-center px-1 md:px-0 space-x-2 bg-[#8FDACF] dark:bg-[#364153] py-4 md:w-[85%] w-[90%] mx-auto rounded-2xl"
+      >
         {tabs.map((tab) => (
           <button
             key={tab.key}
@@ -223,16 +241,22 @@ export const Team = () => {
             {tab.label}
           </button>
         ))}
-      </div>
+      </motion.div>
       <main className="py-8 px-4 md:px-16 mb-10">
         <h2 className="text-2xl font-bold text-center mb-6">
           {tabs.find((tab) => tab.key === activeTab)?.label}
         </h2>
-        <div className="grid grid-cols-2 sm:grid-cols-3 gap-6 mt-4">
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ amount: 0.2 }}
+          className="grid grid-cols-2 sm:grid-cols-3 gap-6 mt-4"
+        >
           {teamData[activeTab].map((member, index) => (
             <TeamCard key={index} {...member} />
           ))}
-        </div>
+        </motion.div>
       </main>
     </div>
   );
