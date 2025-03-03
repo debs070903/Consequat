@@ -142,6 +142,11 @@ const teamData = {
   ],
   sponsors: [
     {
+      name: "Rupam Ghosh",
+      role: "Sponsor Advisor",
+      img: "/assets/RupamGhosh.jpg",
+    },
+    {
       name: "Nawal Fida Laskar",
       role: "Sponsor Head",
       img: "/assets/NawalFidaLaskar.jpg",
@@ -164,6 +169,11 @@ const teamData = {
     },
   ],
   pr: [
+    {
+      name: "Isha Goswami",
+      role: "PR Advisor",
+      img: "/assets/IshaGoswami.jpg",
+    },
     {
       name: "Shaazaya Choudhury",
       role: "PR Head",
