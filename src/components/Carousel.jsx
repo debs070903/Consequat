@@ -38,7 +38,7 @@ export const Carousel = () => {
   return (
     <div className=" bg-[#8FDACF] dark:bg-[#444444] w-full">
       <div className="md:pt-6 pt-3">
-        <h1 className="md:text-4xl text-2xl font-bold text-teal-800 dark:text-white">
+        <h1 className="md:text-4xl text-2xl font-bold text-teal-800 dark:text-white text-center">
           FROM THE ARCHIVES
         </h1>
       </div>

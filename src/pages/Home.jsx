@@ -77,7 +77,7 @@ export const Home = () => {
           </h1>
           {timeLeft.expired ? (
             <p className="text-lg md:text-xl text-red-500">
-              The event has started!
+              Registration Closed!
             </p>
           ) : (
             <div className="flex gap-2 md:gap-4 justify-center dark:text-gray-700 text-gray-300 flex-wrap">
