@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Navbar } from "../components/Navbar";
-import Cover from "../assets/Cover.png";
-import Cover1 from "../assets/Cover1.png";
+import Cover from "../assets/Cover.jpg";
+import Cover1 from "../assets/Cover1.jpg";
 import consequat3 from "../assets/consequat3.jpg";
 import { TimeBox } from "../components/TimeBox";
 import { Carousel } from "../components/Carousel";
