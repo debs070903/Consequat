@@ -10,6 +10,7 @@ const teamData = {
     { name: "Sayantan Nath", role: "Advisor", img: "/assets/SayantanNath.jpg" },
     { name: "Rajdeep Paul", role: "Advisor", img: "/assets/RajdeepPaul.jpg" },
     { name: "Arghya Mondal", role: "Advisor", img: "/assets/ArghyaMondal.jpg" },
+    { name: "Somartya Bera", role: "Advisor", img: "/assets/SomartyaBera.jpg" },
   ],
   mentors: [
     {
@@ -32,7 +33,6 @@ const teamData = {
       role: "Mentor",
       img: "/assets/SupriyoMondal.jpg",
     },
-    { name: "Somartya Bera", role: "Mentor", img: "/assets/SomartyaBera.jpg" },
     { name: "Shayan Bose", role: "Mentor", img: "/assets/ShayanBose.jpg" },
     {
       name: "Shilpa Bhattacharya",
@@ -50,6 +50,11 @@ const teamData = {
       name: "Gairik Chakraborty",
       role: "Mentor",
       img: "/assets/GairikChakraborty.jpg",
+    },
+    {
+      name: "Prerona Chakraborty",
+      role: "Mentor",
+      img: "/assets/PreronaChakraborty.jpg",
     },
     { name: "Simran Nasrin", role: "Mentor", img: "/assets/SimranNasrin.jpg" },
     { name: "Soham Mitra", role: "Mentor", img: "/assets/SohamMitra.jpg" },
