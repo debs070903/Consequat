@@ -37,10 +37,20 @@ export const Navbar = () => {
 
       <div className="hidden md:flex">
         <ul className="flex gap-8 text-white list-none">
-          <Link to='/' ><li className="text-left hover:underline cursor-pointer">HOME</li></Link>
-          <Link to='/about'><li className="text-left hover:underline cursor-pointer">ABOUT</li></Link>
-          <Link to='/team'><li className="text-left hover:underline cursor-pointer">TEAM</li></Link>
-          <Link to='/contact'><li className="text-left hover:underline cursor-pointer">CONTACT US</li></Link>
+          <Link to="/">
+            <li className="text-left hover:underline cursor-pointer">HOME</li>
+          </Link>
+          <Link to="/about">
+            <li className="text-left hover:underline cursor-pointer">ABOUT</li>
+          </Link>
+          <Link to="/team">
+            <li className="text-left hover:underline cursor-pointer">TEAM</li>
+          </Link>
+          <Link to="/contact">
+            <li className="text-left hover:underline cursor-pointer">
+              CONTACT US
+            </li>
+          </Link>
         </ul>
       </div>
 
@@ -63,10 +73,20 @@ export const Navbar = () => {
       {isMenuOpen && (
         <div className="absolute top-20 left-0 w-full bg-teal-600 dark:bg-gray-800 text-white flex flex-col gap-4 p-4">
           <ul className="list-none text-center">
-          <Link to='/' ><li className="py-2 hover:underline cursor-pointer">HOME</li></Link>
-          <Link to='/about'><li className="py-2 hover:underline cursor-pointer">ABOUT</li></Link>
-          <Link to='/team'><li className="py-2 hover:underline cursor-pointer">TEAM</li></Link>
-          <Link to='/contact'><li className="py-2 hover:underline cursor-pointer">CONTACT US</li></Link>
+            <Link to="/" onClick={() => setIsMenuOpen(false)}>
+              <li className="py-2 hover:underline cursor-pointer">HOME</li>
+            </Link>
+            <Link to="/about" onClick={() => setIsMenuOpen(false)}>
+              <li className="py-2 hover:underline cursor-pointer">ABOUT</li>
+            </Link>
+            <Link to="/team" onClick={() => setIsMenuOpen(false)}>
+              <li className="py-2 hover:underline cursor-pointer">TEAM</li>
+            </Link>
+            <Link to="/contact" onClick={() => setIsMenuOpen(false)}>
+              <li className="py-2 hover:underline cursor-pointer">
+                CONTACT US
+              </li>
+            </Link>
           </ul>
         </div>
       )}

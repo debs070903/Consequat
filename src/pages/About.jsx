@@ -6,6 +6,7 @@ import { Footer } from "../components/Footer";
 import { useNavigate } from "react-router-dom";
 import brochure from "../assets/SponsorBrochure.pdf";
 import { motion } from "framer-motion";
+import { SponsorCarousel } from "../components/SponsorCarousel";
 
 export const About = () => {
   const navigate = useNavigate();
@@ -153,8 +154,8 @@ export const About = () => {
                 received attractive prizes, while every participant was awarded
                 a medal and a certificate. This year, we’re taking Consequat to
                 even greater heights. In 2025, we will be organizing Consequat
-                at the Nandalal Bose and Jamini Roy Galleries at ICCR on May 3rd
-                and 4th, 2025.
+                at the Nandalal Bose and Jamini Roy Galleries at ICCR on June
+                28th and 29th, 2025.
               </p>
             </motion.div>
           </motion.div>
@@ -182,6 +183,16 @@ export const About = () => {
           </div>
         </div>
       </div>
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        viewport={{ amount: 0.2 }}
+        className="mt-16 mb-10"
+      >
+        {" "}
+        <SponsorCarousel />{" "}
+      </motion.div>
       <div className="md:mt-10"></div>
     </div>
   );

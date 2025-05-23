@@ -9,6 +9,7 @@ import { Footer } from "../components/Footer";
 import { Link, useNavigate } from "react-router-dom";
 import brochure from "../assets/SponsorBrochure.pdf";
 import { motion } from "framer-motion";
+import { SponsorCarousel } from "../components/SponsorCarousel";
 
 export const Home = () => {
   const navigate = useNavigate();
@@ -209,6 +210,16 @@ export const Home = () => {
             </button>
           </div>
         </motion.div>
+      </motion.div>
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        viewport={{ amount: 0.2 }}
+        className="mt-16 mb-10"
+      >
+        {" "}
+        <SponsorCarousel />{" "}
       </motion.div>
       <div className="md:mt-20 mt-10"></div>
     </div>
